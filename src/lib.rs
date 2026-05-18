@@ -3,6 +3,7 @@ pub mod backtrack;
 pub mod binary;
 pub mod binary_tree;
 pub mod dp;
+pub mod hash;
 pub mod linkedlist;
 pub mod rust;
 pub mod string;
