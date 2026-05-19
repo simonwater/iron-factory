@@ -3,7 +3,7 @@ struct Solution;
 
 use std::collections::HashSet;
 impl Solution {
-    // 通过哈希表记录是否已经存在，如果存在，需要从左边界开始一个一个的迭代删除。
+    /// 通过哈希表记录是否已经存在，如果存在，需要从左边界开始一个一个的迭代删除。
     pub fn length_of_longest_substring(s: String) -> i32 {
         if s.len() <= 1 {
             return s.len() as i32;

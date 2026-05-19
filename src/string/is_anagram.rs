@@ -2,6 +2,7 @@
 struct Solution;
 
 impl Solution {
+    /// 使用栈上固定大小的数组记录字符频次，相比堆上哈希表性能高很多。
     pub fn is_anagram(s: String, t: String) -> bool {
         if s.len() != t.len() {
             return false;
