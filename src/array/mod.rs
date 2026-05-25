@@ -3,6 +3,7 @@ pub mod interval;
 pub mod majority_element;
 pub mod move_zeroes;
 pub mod product_except_self;
+pub mod sort;
 pub mod sorted_squares;
 pub mod stock_max_profit;
 pub mod three_sum;
