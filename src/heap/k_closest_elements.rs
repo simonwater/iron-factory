@@ -38,7 +38,7 @@ impl Solution {
                 lo += 1;
             }
         }
-        arr[lo..hi + 1].to_vec()
+        (&arr[lo..hi + 1]).to_vec()
     }
 }
 
