@@ -1,3 +1,4 @@
+pub mod build_tree;
 pub mod count_nodes;
 pub mod diameter_of_binary_tree;
 pub mod invert_tree;
