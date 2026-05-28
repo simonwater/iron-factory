@@ -1,4 +1,5 @@
 pub mod backspace_compare;
 pub mod eval_rpn;
+pub mod min_stack;
 pub mod my_queue;
 pub mod valid_parentheses;

@@ -32,36 +32,9 @@ impl Solution2 {
         let mut j = t_bytes.len() as i32 - 1;
         while i >= 0 || j >= 0 {
             // 处理i指针
-            let mut skip_cnt = 0;
-            while i >= 0 {
-                if s_bytes[i as usize] == b'#' {
-                    skip_cnt += 1;
-                    i -= 1;
-                } else {
-                    if skip_cnt > 0 {
-                        skip_cnt -= 1;
-                        i -= 1;
-                    } else {
-                        break;
-                    }
-                }
-            }
-
+            i = Self::back_scan(s_bytes, i);
             // 处理j指针
-            skip_cnt = 0;
-            while j >= 0 {
-                if t_bytes[j as usize] == b'#' {
-                    skip_cnt += 1;
-                    j -= 1;
-                } else {
-                    if skip_cnt > 0 {
-                        skip_cnt -= 1;
-                        j -= 1;
-                    } else {
-                        break;
-                    }
-                }
-            }
+            j = Self::back_scan(t_bytes, j);
 
             if i < 0 && j < 0 {
                 return true;
@@ -73,6 +46,25 @@ impl Solution2 {
             j -= 1;
         }
         true
+    }
+
+    // 处理‘#’
+    fn back_scan(bytes: &[u8], mut pos: i32) -> i32 {
+        let mut skip_cnt = 0;
+        while pos >= 0 {
+            if bytes[pos as usize] == b'#' {
+                skip_cnt += 1;
+                pos -= 1;
+            } else {
+                if skip_cnt > 0 {
+                    skip_cnt -= 1;
+                    pos -= 1;
+                } else {
+                    break;
+                }
+            }
+        }
+        pos
     }
 }
 
