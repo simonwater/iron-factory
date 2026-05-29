@@ -14,5 +14,6 @@ pub mod path_sum;
 pub mod prune_tree;
 pub mod sum_numbers;
 pub mod tree_node;
+pub mod width_of_binary_tree;
 
 pub use tree_node::TreeNode;
