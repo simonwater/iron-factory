@@ -1,5 +1,6 @@
 pub mod container_with_most_water;
 pub mod contains_duplicate;
+pub mod gas_station;
 pub mod interval;
 pub mod majority_element;
 pub mod move_zeroes;
