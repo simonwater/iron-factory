@@ -1,1 +1,2 @@
-mod combination_sum;
+pub mod combination_sum;
+pub mod permutations;
