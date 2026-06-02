@@ -6,20 +6,23 @@ impl Solution {
     pub fn permute(nums: Vec<i32>) -> Vec<Vec<i32>> {
         let mut ans = Vec::with_capacity(10);
         let mut path = Vec::with_capacity(nums.len());
-        Self::dfs(&nums, &mut path, &mut ans);
+        let mut used = vec![false; nums.len()];
+        Self::dfs(&nums, &mut path, &mut ans, &mut used);
         ans
     }
 
-    fn dfs(nums: &[i32], path: &mut Vec<i32>, ans: &mut Vec<Vec<i32>>) {
+    fn dfs(nums: &[i32], path: &mut Vec<i32>, ans: &mut Vec<Vec<i32>>, used: &mut Vec<bool>) {
         if path.len() == nums.len() {
             ans.push(path.clone());
             return;
         }
-        for &num in nums {
-            if !path.contains(&num) {
+        for (idx, &num) in nums.iter().enumerate() {
+            if !used[idx] {
+                used[idx] = true;
                 path.push(num);
-                Self::dfs(nums, path, ans);
+                Self::dfs(nums, path, ans, used);
                 path.pop();
+                used[idx] = false;
             }
         }
     }
