@@ -1,4 +1,5 @@
 pub mod LIS;
+pub mod find_peak_element;
 pub mod first_bad_version;
 pub mod k_closest_elements;
 pub mod rotated_sorted_array;
