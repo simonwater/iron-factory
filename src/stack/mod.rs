@@ -1,3 +1,4 @@
+pub mod asteroid_collision;
 pub mod backspace_compare;
 pub mod daily_temperatures;
 pub mod decode_string;
