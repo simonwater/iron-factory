@@ -1,5 +1,6 @@
 pub mod asteroid_collision;
 pub mod backspace_compare;
+pub mod basic_calculator;
 pub mod daily_temperatures;
 pub mod decode_string;
 pub mod eval_rpn;
