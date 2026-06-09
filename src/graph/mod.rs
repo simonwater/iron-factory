@@ -2,6 +2,7 @@ pub mod course_schedule;
 pub mod course_schedule_ii;
 pub mod flood_fill;
 pub mod max_area_of_island;
+pub mod min_height_trees;
 pub mod node;
 pub mod num_islands;
 pub mod number_of_provinces;
