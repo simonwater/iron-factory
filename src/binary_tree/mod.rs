@@ -1,3 +1,4 @@
+pub mod binary_search_tree;
 pub mod build_tree;
 pub mod complete_binary_tree_inserter;
 pub mod count_nodes;
@@ -14,7 +15,6 @@ pub mod lowest_common_ancestor;
 pub mod max_depth;
 pub mod max_path_sum;
 pub mod merge_trees;
-pub mod my_calendar_i;
 pub mod path_sum;
 pub mod populating_next_right_pointers;
 pub mod prune_tree;
