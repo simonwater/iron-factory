@@ -6,6 +6,7 @@ pub mod min_height_trees;
 pub mod node;
 pub mod num_islands;
 pub mod number_of_provinces;
+pub mod pacific_atlantic;
 pub mod redundant_connection;
 pub mod rotting_oranges;
 pub mod surrounded_regions;
