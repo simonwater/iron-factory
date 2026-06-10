@@ -11,6 +11,7 @@ pub mod number_of_provinces;
 pub mod pacific_atlantic;
 pub mod redundant_connection;
 pub mod rotting_oranges;
+pub mod shortest_path_binary_matrix;
 pub mod surrounded_regions;
 pub mod update_matrix;
 pub mod word_search;
