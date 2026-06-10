@@ -12,4 +12,5 @@ pub mod math;
 pub mod rust;
 pub mod stack;
 pub mod string;
+pub mod trie;
 pub mod uncategory;
