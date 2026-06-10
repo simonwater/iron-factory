@@ -1,5 +1,6 @@
 pub mod course_schedule;
 pub mod course_schedule_ii;
+pub mod find_cheapest_price;
 pub mod flood_fill;
 pub mod max_area_of_island;
 pub mod min_height_trees;
