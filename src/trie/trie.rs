@@ -1,20 +1,20 @@
 /// [208. 实现 Trie (前缀树)](https://leetcode.cn/problems/implement-trie-prefix-tree/)
 const INIT: Option<Box<Trie>> = None;
 
-struct Trie {
+pub struct Trie {
     pub is_end: bool,
     pub datas: [Option<Box<Trie>>; 26],
 }
 
 impl Trie {
-    fn new() -> Self {
+    pub fn new() -> Self {
         Self {
             is_end: false,
             datas: [INIT; 26],
         }
     }
 
-    fn insert(&mut self, word: String) {
+    pub fn insert(&mut self, word: String) {
         let bytes = word.as_bytes();
         let mut t = self;
         for &c in bytes {
@@ -27,11 +27,15 @@ impl Trie {
         t.is_end = true;
     }
 
-    fn search(&self, word: String) -> bool {
+    pub fn search_str(&self, word: &str) -> bool {
+        self.find(word).is_some_and(|t| t.is_end)
+    }
+
+    pub fn search(&self, word: String) -> bool {
         self.find(&word).is_some_and(|t| t.is_end)
     }
 
-    fn starts_with(&self, prefix: String) -> bool {
+    pub fn starts_with(&self, prefix: String) -> bool {
         self.find(&prefix).is_some()
     }
 
