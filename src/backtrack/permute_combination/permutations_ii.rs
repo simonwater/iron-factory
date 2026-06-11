@@ -16,12 +16,12 @@ impl Solution {
         let mut used_nums = HashSet::with_capacity(nums.len() - start);
         for i in start..nums.len() {
             let cur = nums[i];
-            if !used_nums.contains(&cur) {
-                used_nums.insert(cur);
-                nums.swap(start, i);
-                Self::dfs(start + 1, nums, ans);
-                nums.swap(start, i);
+            if !used_nums.insert(cur) {
+                continue;
             }
+            nums.swap(start, i);
+            Self::dfs(start + 1, nums, ans);
+            nums.swap(start, i);
         }
     }
 }
