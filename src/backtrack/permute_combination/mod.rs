@@ -1,5 +1,6 @@
 pub mod combination_sum;
 pub mod combination_sum_ii;
+pub mod combination_sum_iii;
 pub mod combine_n_k;
 pub mod permutations;
 pub mod permutations_ii;
