@@ -1,6 +1,8 @@
 /// [547. 省份数量](https://leetcode.cn/problems/number-of-provinces/)
+/// 题目中的图由邻接矩阵给出
 struct Solution;
 
+// 方法一相当于遍历所有的边然后构建并查集
 impl Solution {
     pub fn find_circle_num(is_connected: Vec<Vec<i32>>) -> i32 {
         let mut n = is_connected.len();
@@ -33,6 +35,7 @@ impl Solution {
     }
 }
 
+// 类似[200. 岛屿数量]的处理方式“发现一个消灭一片，答案加1”。区别在于图节点间的连通方式由邻接矩阵给出
 struct Solution2;
 
 impl Solution2 {

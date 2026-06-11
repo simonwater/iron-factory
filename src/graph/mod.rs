@@ -1,3 +1,4 @@
+pub mod bipartite_graph;
 pub mod course_schedule;
 pub mod course_schedule_ii;
 pub mod find_cheapest_price;
