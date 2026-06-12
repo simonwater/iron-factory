@@ -4,6 +4,8 @@ pub mod buy_and_sell_stock_iii;
 pub mod buy_and_sell_stock_iv;
 pub mod climb_stairs;
 pub mod coin_change;
+pub mod coin_change_ii;
+pub mod permute_sum_iv;
 pub mod edit_distance;
 pub mod interleave_string;
 pub mod longest_common_subsequence;
