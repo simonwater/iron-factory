@@ -2,6 +2,7 @@ pub mod bipartite_graph;
 pub mod bus_routes;
 pub mod course_schedule;
 pub mod course_schedule_ii;
+pub mod evaluate_division;
 pub mod find_cheapest_price;
 pub mod flood_fill;
 pub mod longest_increasing_path;
