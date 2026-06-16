@@ -69,7 +69,9 @@ impl Solution {
             if !visited[next_node] {
                 let next_value = Self::dfs(next_node, end, g, states, visited);
                 if next_value != -1.0 {
+                    let new_value = value * next_value;
                     states[start][end] = value * next_value;
+                    states[end][start] = 1.0 / new_value;
                     break;
                 }
             }
