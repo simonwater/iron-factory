@@ -1,8 +1,9 @@
+/// []()
+///
 use crate::binary_tree::TreeNode;
 use std::cell::RefCell;
 use std::rc::Rc;
 
-/// []()
 struct Solution;
 
 impl Solution {

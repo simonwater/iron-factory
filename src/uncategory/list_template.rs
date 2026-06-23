@@ -1,5 +1,6 @@
-use crate::linkedlist::ListNode;
 /// []()
+///
+use crate::linkedlist::ListNode;
 struct Solution;
 
 impl Solution {
