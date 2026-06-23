@@ -1,3 +1,4 @@
+pub mod increasing_bst;
 pub mod is_valid_bst;
 pub mod lowest_common_ancestor;
 pub mod minimum_difference;
