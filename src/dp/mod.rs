@@ -18,4 +18,5 @@ pub mod max_product;
 pub mod max_subarray_sum_circular;
 pub mod maximal_square;
 pub mod maximum_subarray;
+pub mod min_path_sum;
 pub mod triangle;
