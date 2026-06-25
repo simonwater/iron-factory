@@ -14,6 +14,7 @@ pub mod length_of_lis;
 pub mod longest_common_subsequence;
 pub mod longest_palindrome;
 pub mod max_product;
+pub mod max_subarray_sum_circular;
 pub mod maximal_square;
 pub mod maximum_subarray;
 pub mod triangle;
