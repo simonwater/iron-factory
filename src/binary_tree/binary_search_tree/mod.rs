@@ -1,5 +1,6 @@
 pub mod increasing_bst;
 pub mod is_valid_bst;
+pub mod kth_smallest;
 pub mod lowest_common_ancestor;
 pub mod minimum_difference;
 pub mod my_calendar_i;
