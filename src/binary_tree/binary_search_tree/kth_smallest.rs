@@ -4,6 +4,7 @@ use crate::binary_tree::TreeNode;
 use std::cell::RefCell;
 use std::rc::Rc;
 
+/// 递归中序遍历
 struct Solution;
 
 impl Solution {
@@ -31,6 +32,7 @@ impl Solution {
     }
 }
 
+/// 迭代中序遍历
 struct Solution2;
 
 impl Solution2 {

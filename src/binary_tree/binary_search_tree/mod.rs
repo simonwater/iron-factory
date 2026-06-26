@@ -1,4 +1,5 @@
 pub mod increasing_bst;
+pub mod inorder_successor;
 pub mod is_valid_bst;
 pub mod kth_smallest;
 pub mod lowest_common_ancestor;
