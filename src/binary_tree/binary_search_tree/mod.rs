@@ -1,3 +1,4 @@
+pub mod delete_node_in_bst;
 pub mod increasing_bst;
 pub mod inorder_successor;
 pub mod is_valid_bst;
