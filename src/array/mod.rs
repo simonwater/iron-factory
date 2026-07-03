@@ -6,6 +6,7 @@ pub mod interval;
 pub mod longest_consecutive;
 pub mod majority_element;
 pub mod move_zeroes;
+pub mod next_permutation;
 pub mod product_except_self;
 pub mod rotate_array;
 pub mod sort;
