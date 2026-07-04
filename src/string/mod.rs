@@ -1,4 +1,5 @@
 pub mod character_replacement;
+pub mod check_inclusion;
 pub mod find_anagrams;
 pub mod group_anagrams;
 pub mod largest_number;
