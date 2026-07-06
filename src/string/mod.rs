@@ -8,3 +8,4 @@ pub mod longest_common_prefix;
 pub mod min_window;
 pub mod palindrome;
 pub mod partition_labels;
+pub mod reverse_words;
