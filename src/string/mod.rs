@@ -9,3 +9,4 @@ pub mod min_window;
 pub mod palindrome;
 pub mod partition_labels;
 pub mod reverse_words;
+pub mod z_conversion;
