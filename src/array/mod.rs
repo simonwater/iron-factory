@@ -7,6 +7,7 @@ pub mod longest_consecutive;
 pub mod majority_element;
 pub mod move_zeroes;
 pub mod next_permutation;
+pub mod pivot_index;
 pub mod product_except_self;
 pub mod product_less_than_k;
 pub mod rotate_array;
