@@ -4,7 +4,7 @@ pub struct Solution;
 
 impl Solution {
     //
-    pub fn single_number(mut nums: Vec<i32>) -> i32 {
+    pub fn single_number(nums: Vec<i32>) -> i32 {
         let mut ans = 0;
         for i in 0..32 {
             let mut acc = 0;
