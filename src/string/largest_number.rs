@@ -3,7 +3,7 @@
 
 pub struct Solution;
 impl Solution {
-    pub fn largest_number(mut nums: Vec<i32>) -> String {
+    pub fn largest_number(nums: Vec<i32>) -> String {
         let mut strs: Vec<String> = nums.into_iter().map(|num| num.to_string()).collect();
         strs.sort_unstable_by(|a, b| {
             let ab = a.as_bytes().iter().chain(b.as_bytes());
