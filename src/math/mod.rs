@@ -1,4 +1,5 @@
 pub mod find_duplicate;
+pub mod missing_number;
 pub mod palindrome_number;
 pub mod power_of_two;
 pub mod single_number;
