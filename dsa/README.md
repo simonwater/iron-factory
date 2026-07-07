@@ -1,4 +1,4 @@
-# rust-dsa 知识总结
+# Rust Data Structure & Algorithm 知识总结
 
 > 基于 LeetCode Rust 题解的算法、数据结构、模式与 Rust 语言技巧全面回顾手册
 >

@@ -10,7 +10,7 @@ impl Solution {
         }
         let n = nums.len();
         let k = n - (k as usize);
-        let mut rng = rand::thread_rng(); // 只构造一次
+        let mut rng = rand::rng(); // 只构造一次
         Self::qselect(&mut nums, 0, n - 1, k, &mut rng)
     }
 
@@ -18,7 +18,7 @@ impl Solution {
         if start >= end {
             return nums[start];
         }
-        let idx: usize = rng.gen_range(start..=end);
+        let idx: usize = rng.random_range(start..=end);
         let pivot = nums[idx];
         let mut left = start;
         let mut i = start;

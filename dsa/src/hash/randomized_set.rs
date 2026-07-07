@@ -41,8 +41,8 @@ impl RandomizedSet {
 
     pub fn get_random(&self) -> i32 {
         // 无需放到结构体属性上，否则get_random方法的mut会影响并发性能
-        let mut rng = rand::thread_rng();
-        let idx: usize = rng.gen_range(0..self.val_vec.len());
+        let mut rng = rand::rng();
+        let idx: usize = rng.random_range(0..self.val_vec.len());
         self.val_vec[idx]
     }
 }

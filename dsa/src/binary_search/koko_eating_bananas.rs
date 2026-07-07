@@ -4,7 +4,7 @@ pub struct Solution;
 
 impl Solution {
     //
-    pub fn min_eating_speed(mut piles: Vec<i32>, h: i32) -> i32 {
+    pub fn min_eating_speed(piles: Vec<i32>, h: i32) -> i32 {
         let n = piles.len();
         let h_usize = h as usize;
         let h_i64 = h as i64;

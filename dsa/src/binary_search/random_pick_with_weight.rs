@@ -20,8 +20,8 @@ impl Solution {
     }
 
     pub fn pick_index(&self) -> i32 {
-        let mut rng = rand::thread_rng();
-        let x = rng.gen_range(0..self.total);
+        let mut rng = rand::rng();
+        let x = rng.random_range(0..self.total);
         let mut lo = 0;
         let mut hi = self.intervals.len() - 1;
         while lo <= hi {
@@ -58,8 +58,8 @@ impl Solution2 {
     }
 
     pub fn pick_index(&self) -> i32 {
-        let mut rng = rand::thread_rng();
-        let x = rng.gen_range(0..self.total);
+        let mut rng = rand::rng();
+        let x = rng.random_range(0..self.total);
         // 寻找大于等于x的第一个索引
         let mut lo = 0;
         let mut hi = self.bounds.len() - 1;

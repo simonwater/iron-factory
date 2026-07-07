@@ -9,7 +9,6 @@ pub mod hash;
 pub mod heap;
 pub mod linkedlist;
 pub mod math;
-pub mod rust;
 pub mod stack;
 pub mod string;
 pub mod trie;

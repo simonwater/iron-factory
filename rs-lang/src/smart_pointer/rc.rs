@@ -15,7 +15,7 @@ pub struct Data {
 
 #[cfg(test)]
 mod tests {
-    use crate::rust::smart_pointer::rc::List::{Cons, Nil};
+    use crate::smart_pointer::rc::List::{Cons, Nil};
 
     use super::*;
 

@@ -9,7 +9,7 @@ pub enum List {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::rust::smart_pointer::rc_cell::List::{Cons, Nil};
+    use crate::smart_pointer::rc_cell::List::{Cons, Nil};
 
     #[test]
     fn test1() {
