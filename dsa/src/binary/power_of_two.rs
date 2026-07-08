@@ -20,6 +20,7 @@ impl Solution {
 
 pub struct Solution2;
 
+/// 对任意数n执行如下计算：n = n & (n - 1), 效果为将 n 最右侧的一个 1 抹平为 0
 impl Solution2 {
     pub fn is_power_of_two(n: i32) -> bool {
         n > 0 && n & (n - 1) == 0

@@ -800,7 +800,7 @@ pub struct Trie {
 | 题目 | 方法 | Rust 技巧 | 源码 |
 |------|------|-----------|------|
 | [9. 回文数](src/math/palindrome_number.rs) | 反转一半 / 全反转(i64) / 转字符串 | `i64` 防溢出；三解法 | palindrome_number.rs |
-| [231. 2的幂](src/math/power_of_two.rs) | `n & (n-1) == 0` | 位运算一行 | power_of_two.rs |
+| [231. 2的幂](src/binary/power_of_two.rs) | `n & (n-1) == 0` | 位运算一行 | power_of_two.rs |
 | [264. 丑数 II](src/math/ugly_number.rs) | **多路归并**：小顶堆 + HashSet | `BinaryHeap<Reverse<i64>>`；三路 push | ugly_number.rs |
 | [287. 寻找重复数](src/math/find_duplicate.rs) | Floyd 判圈（数组即链表） | `loop` + `break` | find_duplicate.rs |
 | [621. 任务调度器](src/math/task_scheduler.rs) | 公式法 | `.iter().max()` + `.filter().count()` | task_scheduler.rs |

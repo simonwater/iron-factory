@@ -1,3 +1,10 @@
 pub mod add_binary;
 pub mod counting_bits;
+pub mod max_product;
+pub mod missing_number;
 pub mod number_of_1_bits;
+pub mod power_of_two;
+pub mod range_bitwise_and;
+pub mod reverse_bits;
+pub mod single_number;
+pub mod single_number_ii;
