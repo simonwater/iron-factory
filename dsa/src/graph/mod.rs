@@ -18,6 +18,7 @@ pub mod num_islands;
 pub mod number_of_provinces;
 pub mod open_lock;
 pub mod pacific_atlantic;
+pub mod reconstruct_itinerary;
 pub mod redundant_connection;
 pub mod rotting_oranges;
 pub mod shortest_path_binary_matrix;
