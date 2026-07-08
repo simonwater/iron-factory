@@ -1,4 +1,5 @@
 pub mod find_duplicate;
+pub mod max_product;
 pub mod missing_number;
 pub mod palindrome_number;
 pub mod power_of_two;
