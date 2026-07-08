@@ -1,6 +1,7 @@
 /// [231. 2 的幂](https://leetcode.cn/problems/power-of-two/)
 pub struct Solution;
 
+/// 直接统计 1 的个数
 impl Solution {
     pub fn is_power_of_two(mut n: i32) -> bool {
         if n <= 0 {

@@ -3,6 +3,7 @@
 
 pub struct Solution;
 
+/// 两数同时不断右移，直到相等。最后把0补回来
 impl Solution {
     pub fn range_bitwise_and(mut left: i32, mut right: i32) -> i32 {
         let mut cnt = 0;

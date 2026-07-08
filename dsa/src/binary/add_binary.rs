@@ -1,4 +1,5 @@
 /// [67. 二进制求和](https://leetcode.cn/problems/add-binary/description/)
+/// 以字符串/数组/链表格式表示的大数相加通用流程
 pub struct Solution;
 
 impl Solution {

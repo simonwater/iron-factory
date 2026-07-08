@@ -12,6 +12,19 @@ impl Solution {
     }
 }
 
+pub struct Solution2;
+
+impl Solution2 {
+    pub fn hamming_weight(mut n: i32) -> i32 {
+        let mut ans = 0;
+        while n > 0 {
+            n &= n - 1; // 将 n 最右侧的一个 1 抹平为 0
+            ans += 1;
+        }
+        ans
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;

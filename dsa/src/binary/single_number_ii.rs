@@ -1,5 +1,5 @@
 /// # [137. 只出现一次的数字 II](https://leetcode.cn/problems/single-number-ii/)
-///
+/// 只出现 1 次的数和出现 3 次的数，分别统计所有数字相同位的元素，对 3 取模，出现 3 次的被消灭，剩下的余数为结果
 pub struct Solution;
 
 impl Solution {

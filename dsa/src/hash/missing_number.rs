@@ -25,6 +25,7 @@ pub struct Solution2;
 impl Solution2 {
     pub fn missing_number(mut nums: Vec<i32>) -> i32 {
         let n = nums.len() as i32;
+        // 第1步类似于把数字插入哈希表，原地哈希表现为归位到索引和值相同的位置
         for idx in 0..nums.len() {
             while nums[idx] != n && nums[idx] != idx as i32 {
                 let cur = nums[idx];
@@ -35,6 +36,7 @@ impl Solution2 {
                 }
             }
         }
+        // 第2步类似于挨个数字判断哈希表中是否已经有该数字
         for (i, &num) in nums.iter().enumerate() {
             let i = i as i32;
             if i != num {
