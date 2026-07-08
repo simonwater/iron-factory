@@ -6,9 +6,7 @@ use std::rc::Rc;
 
 pub struct Solution;
 
-impl Solution {
-    //
-}
+impl Solution {}
 
 #[cfg(test)]
 mod tests {

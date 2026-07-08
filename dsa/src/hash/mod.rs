@@ -1,3 +1,4 @@
+pub mod find_duplicate;
 pub mod first_missing_positive;
 pub mod happy_number;
 pub mod is_anagram;

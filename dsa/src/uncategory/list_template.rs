@@ -3,9 +3,7 @@
 use crate::linkedlist::ListNode;
 pub struct Solution;
 
-impl Solution {
-    //
-}
+impl Solution {}
 
 #[cfg(test)]
 mod tests {
