@@ -3,6 +3,7 @@ pub mod max_product;
 pub mod missing_number;
 pub mod palindrome_number;
 pub mod power_of_two;
+pub mod range_bitwise_and;
 pub mod reverse_bits;
 pub mod single_number;
 pub mod single_number_ii;
