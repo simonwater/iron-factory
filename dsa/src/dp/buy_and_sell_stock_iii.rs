@@ -1,16 +1,16 @@
-/// [123. 买卖股票的最佳时机 III](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/description/)
+/// # [123. 买卖股票的最佳时机 III](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/)
+/// > 只能完成两笔交易(买、卖各两次)
 pub struct Solution;
 
 impl Solution {
+    /// **动态规划**
     pub fn max_profit(prices: Vec<i32>) -> i32 {
-        let n = prices.len();
         let (mut buy1, mut sell1, mut buy2, mut sell2) = (-prices[0], 0, -prices[0], 0);
-        for i in 1..n {
-            let price = prices[i];
-            let new_buy1 = std::cmp::max(buy1, -price);
-            let new_sell1 = std::cmp::max(sell1, buy1 + price);
-            let new_buy2 = std::cmp::max(buy2, sell1 - price);
-            let new_sell2 = std::cmp::max(sell2, buy2 + price);
+        for price in prices {
+            let new_buy1 = buy1.max(-price);
+            let new_sell1 = sell1.max(buy1 + price);
+            let new_buy2 = buy2.max(sell1 - price);
+            let new_sell2 = sell2.max(buy2 + price);
             (buy1, sell1, buy2, sell2) = (new_buy1, new_sell1, new_buy2, new_sell2);
         }
         sell2
