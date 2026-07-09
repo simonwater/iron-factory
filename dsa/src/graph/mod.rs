@@ -25,6 +25,7 @@ pub mod shortest_path_binary_matrix;
 pub mod snakes_and_ladders;
 pub mod surrounded_regions;
 pub mod update_matrix;
+pub mod valid_arrangement;
 pub mod word_ladder;
 pub mod word_search;
 pub mod word_search_ii;
