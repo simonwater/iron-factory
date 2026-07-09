@@ -5,6 +5,7 @@ pub mod bus_routes;
 pub mod count_paths;
 pub mod course_schedule;
 pub mod course_schedule_ii;
+pub mod equations_possible;
 pub mod evaluate_division;
 pub mod find_cheapest_price;
 pub mod flood_fill;
