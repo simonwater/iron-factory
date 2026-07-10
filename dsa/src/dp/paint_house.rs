@@ -1,5 +1,6 @@
 //! [LCR 091. 粉刷房子](https://leetcode.cn/problems/JEj789/)
 //!
+//! **状态机DP**
 
 pub struct Solution;
 
