@@ -1,5 +1,5 @@
-/// []()
-///
+//! []()
+//!
 use crate::linkedlist::ListNode;
 pub struct Solution;
 
