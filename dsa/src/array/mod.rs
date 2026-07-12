@@ -1,3 +1,4 @@
+pub mod candy;
 pub mod container_with_most_water;
 pub mod contains_duplicate;
 pub mod contiguous_array;
