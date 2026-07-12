@@ -2,6 +2,7 @@ pub mod container_with_most_water;
 pub mod contains_duplicate;
 pub mod contiguous_array;
 pub mod gas_station;
+pub mod h_index;
 pub mod interval;
 pub mod longest_consecutive;
 pub mod majority_element;
