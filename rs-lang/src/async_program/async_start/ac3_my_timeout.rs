@@ -12,10 +12,8 @@ pub async fn timeout<F: Future>(f: F, max_time: Duration) -> Result<F::Output, D
 }
 #[cfg(test)]
 mod tests {
+    use super::*;
     use std::time::Duration;
-
-    use crate::async_program::ac3_my_timeout::timeout;
-
     #[test]
     fn test() {
         trpl::block_on(async {

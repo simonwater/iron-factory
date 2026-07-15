@@ -1,5 +1,9 @@
 //! [68. 文本左右对齐](https://leetcode.cn/problems/text-justification/)
 //!
+//! 根据题意最后一行和中间行对齐逻辑不同，需要分开处理。所以往右遍历收集单词时，发现新单词会产生溢出时才构造一个新行，
+//! 未溢出或者正好塞满都继续往后遍历，这样能保证循环结束后缓存区中一定放着最后一行的单词。
+//! 
+//! 用双指针构成的滑动窗口作为收集单词的缓冲区，rust中天然形成一个切片，方便处理。
 
 pub struct Solution;
 
@@ -82,17 +86,21 @@ mod tests {
     #[test]
     fn test1() {
         let words: Vec<String> = [
-            "This",
-            "is",
-            "an",
-            "example",
-            "of",
-            "text",
-            "justification.",
+            "ask", "not", "what", "your", "country", "can", "do", "for", "you", "ask", "what",
+            "you", "can", "do", "for", "your", "country",
         ]
         .iter()
         .map(|&s| String::from(s))
         .collect();
-        Solution::full_justify(words, 16);
+        assert_eq!(
+            Solution::full_justify(words, 16),
+            [
+                "ask   not   what",
+                "your country can",
+                "do  for  you ask",
+                "what  you can do",
+                "for your country"
+            ]
+        );
     }
 }
