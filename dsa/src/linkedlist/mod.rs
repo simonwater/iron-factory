@@ -1,5 +1,6 @@
 pub mod add_two_numbers;
 pub mod delete_duplicates;
+pub mod delete_duplicates_ii;
 pub mod insertion_sort_list;
 pub mod linked_list_cycle;
 pub mod list_node;
