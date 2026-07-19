@@ -21,6 +21,7 @@ pub mod populating_next_right_pointers;
 pub mod prune_tree;
 pub mod right_side_view;
 pub mod serialize_and_deserialize;
+pub mod sorted_list_to_bst;
 pub mod sum_numbers;
 pub mod traversal;
 pub mod tree_node;
