@@ -1,3 +1,4 @@
+pub mod bst_iterator;
 pub mod delete_node_in_bst;
 pub mod increasing_bst;
 pub mod inorder_successor;
@@ -9,4 +10,5 @@ pub mod my_calendar_i;
 pub mod search_in_bst;
 pub mod serde_bst;
 pub mod sorted_array_to_bst;
+pub mod sorted_list_to_bst;
 pub mod two_sum_bst;
