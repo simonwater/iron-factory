@@ -52,9 +52,13 @@ impl BSTIterator2 {
             if let Some(left_rc) = left {
                 // 当前节点挂到left上
                 let mut p = left_rc.clone();
-                while p.borrow().right.is_some() {
+                loop {
                     let next = p.borrow().right.clone();
-                    p = next.unwrap();
+                    if let Some(rc) = next {
+                        p = rc;
+                    } else {
+                        break;
+                    }
                 }
                 p.borrow_mut().right = Some(visitor_rc);
                 visitor = Some(left_rc);
