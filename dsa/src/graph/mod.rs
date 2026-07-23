@@ -8,6 +8,7 @@ pub mod course_schedule_ii;
 pub mod equations_possible;
 pub mod evaluate_division;
 pub mod find_cheapest_price;
+pub mod find_the_city;
 pub mod flood_fill;
 pub mod longest_increasing_path;
 pub mod max_area_of_island;
