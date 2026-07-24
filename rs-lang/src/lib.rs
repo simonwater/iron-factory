@@ -2,6 +2,7 @@ pub mod associated_type;
 pub mod async_program;
 pub mod iterator;
 pub mod lang_basic;
+pub mod life_time;
 pub mod raw_pointer;
 pub mod smart_pointer;
 pub mod thread;
