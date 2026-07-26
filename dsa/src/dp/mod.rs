@@ -22,4 +22,5 @@ pub mod maximum_subarray;
 pub mod min_flips_mono_incr;
 pub mod min_path_sum;
 pub mod paint_house;
+pub mod palindrome_partitioning_ii;
 pub mod triangle;
