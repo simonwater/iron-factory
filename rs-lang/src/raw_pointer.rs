@@ -17,7 +17,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn t() {
+    fn test1() {
         let mut arr = [1, 2, 3];
         let (l, r) = split_at_mut(&mut arr, 0);
         println!("{:?}", l);
@@ -34,5 +34,21 @@ mod tests {
         let (l, r) = split_at_mut(&mut arr, 2);
         println!("{:?}", l);
         println!("{:?}", r);
+    }
+
+    #[test]
+    fn test2() {
+        let ptr = 0 as *const u8;
+        let ptr_bytes = unsafe { *ptr }; // 解引用空指针报错
+        println!("{}", ptr_bytes);
+
+        let ptr = 1 as *const u8;
+        let ptr_bytes = unsafe { *ptr }; // 解引用无访问权限的地址，报错
+        println!("{}", ptr_bytes);
+
+        let x = 123u8;
+        let ptr = (&x) as *const u8;
+        let ptr_bytes = unsafe { *ptr }; // 成功解引用
+        println!("{:p}: {}", ptr, ptr_bytes);
     }
 }

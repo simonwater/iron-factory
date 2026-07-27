@@ -1,0 +1,14 @@
+[package]
+name = "storage-engine"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+serde = "1"
+byteorder = "1.2"
+crc = "1.7"
+serde_derive = "1"
+
+[[bin]]
+name = "kv_store"
+path = "src/bin/kv_store.rs"
