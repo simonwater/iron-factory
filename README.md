@@ -12,3 +12,4 @@
 - **[storage-engine](./storage-engine/README.md)** - 数据库/存储引擎/Buffer Pool 等
 - **[mini-os](./mini-os/README.md)** - 操作系统相关 (OS 实验/内核片段)
 - **[tiny-computer](./tiny-computer/README.md)** - 微型计算机的模拟
+- **[network-stack](./network-stack/README.md)** - 网络栈
