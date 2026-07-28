@@ -31,19 +31,20 @@ fn main() {
 
     match action {
         "get" => match store.get(key) {
-            None => eprintln!("{:?} not found", key),
-            Some(value) => println!("{:?}", value),
+            Ok(None) => eprintln!("{:?} not found", key),
+            Ok(Some(value)) => println!("{:?}", value),
+            Err(err) => eprintln!("{}", err),
         },
         "delete" => {
-            store.delete(key);
+            store.delete(key).unwrap();
         }
         "insert" => {
             let value = maybe_value.expect(&USAGE).as_ref();
-            store.insert(key, value);
+            store.insert(key, value).unwrap();
         }
         "update" => {
             let value = maybe_value.expect(&USAGE).as_ref();
-            store.update(key, value);
+            store.update(key, value).unwrap();
         }
         _ => eprintln!("{}", &USAGE),
     }

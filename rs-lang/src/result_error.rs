@@ -30,6 +30,7 @@ pub fn open_file2(file_name: &str) -> Result<File, MyError> {
     let f = File::open(file_name).map_err(|e| format!("fail to open file: {}", e))?;
     Ok(f)
 }
+
 ///
 /// 定义一个新的Error，聚合多种不同Error并保留内部Error
 #[derive(Debug)]
@@ -71,14 +72,21 @@ impl From<std::string::FromUtf8Error> for CustomError {
     }
 }
 
+/// 聚合层定义了一个 CustomError，把依赖的多方接口对应的Error聚合到 CustomError ，对外统一返回CustomError。
+/// 1. 通过Result上的map_err进行转换
+/// 2. 实现From特征后通过 `?` 运算符可自动转。
 const MAX_LENGTH: usize = 1024;
 pub fn read_first_line(file_name: &str) -> Result<String, CustomError> {
+    // File相关Error
     let file = File::open(file_name).map_err(|e| CustomError::Io(e))?;
     let mut reader = std::io::BufReader::new(file);
     let mut buf: Vec<u8> = vec![];
+    // io相关Error
     let len = reader
         .read_until(b'\n', &mut buf)
         .map_err(CustomError::Io)?;
+
+    // [u8]转String相关Error
     // 已经为CustomError实现From<std::string::FromUtf8Error>,不用显式调用map_err
     let result = String::from_utf8(buf)?;
     if result.len() > MAX_LENGTH {
