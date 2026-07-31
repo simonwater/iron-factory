@@ -25,7 +25,7 @@ impl Solution {
                 }
             }
         }
-        dp[target][n]
+        dp[n][target]
     }
 }
 
