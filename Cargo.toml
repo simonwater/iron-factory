@@ -1,3 +1,11 @@
 [workspace]
 resolver = "3"
-members = ["dsa", "mini-os", "network-stack", "patterns", "rs-lang", "storage-engine", "tiny-computer"]
+members = [
+    "dsa",
+    "mini-os",
+    "network-stack",
+    "patterns",
+    "rs-lang",
+    "storage-engine",
+    "tiny-computer",
+]
