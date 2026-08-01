@@ -1,6 +1,6 @@
 /// # [279. 完全平方数](https://leetcode.cn/problems/perfect-squares/)
 /// 等价于一组不同的数字，每个数字可重复选择，求能构成目标值的最少数字个数
-/// 完全背包求组合，同322. 零钱兑换
+/// 完全背包求组合，同**322. 零钱兑换**
 
 pub struct Solution;
 
