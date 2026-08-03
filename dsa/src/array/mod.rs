@@ -15,6 +15,7 @@ pub mod product_less_than_k;
 pub mod rotate_array;
 pub mod sort;
 pub mod sorted_squares;
+pub mod spiral_matrix;
 pub mod stock_max_profit;
 pub mod subarray_sum_equals_k;
 pub mod three_sum;
