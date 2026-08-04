@@ -32,13 +32,14 @@ impl CPU {
                     return;
                 }
                 (0, 0, 0xE, 0xE) => self.ret(),
-                (0x2, _, _, _) => self.call(nnn),
-                (0x8, _, _, 0x4) => self.add_xy(x, y),
+                (0x2, _, _, _) => self.call(nnn),      // nnn：地址
+                (0x8, _, _, 0x4) => self.add_xy(x, y), // x、y：寄存器编号
                 _ => todo!("opcode {:04x}", opcode),
             }
         }
     }
 
+    /// 读取当前指令指针指向的地址中的指令
     pub fn read_opcode(&self) -> u16 {
         let p = self.position_in_memory;
         let op_byte1 = self.memory[p] as u16;
@@ -46,6 +47,7 @@ impl CPU {
         op_byte1 << 8 | op_byte2
     }
 
+    /// 将编号为x、y的寄存器中的值相加，并将结果放在x寄存器
     pub fn add_xy(&mut self, x: u8, y: u8) {
         let arg1 = self.registers[x as usize];
         let arg2 = self.registers[y as usize];
@@ -54,6 +56,7 @@ impl CPU {
         self.registers[0xF] = if overflow { 1 } else { 0 }
     }
 
+    /// 调用地址addr处的指令
     fn call(&mut self, addr: u16) {
         let sp = self.stack_pointer;
         let stack = &mut self.stack;
@@ -61,8 +64,10 @@ impl CPU {
             panic!("Stack overflow!");
         }
 
+        // 当前指向的地址入栈
         stack[sp] = self.position_in_memory as u16;
         self.stack_pointer += 1;
+        // 指向新的地址
         self.position_in_memory = addr as usize;
     }
 
@@ -70,6 +75,7 @@ impl CPU {
         if self.stack_pointer == 0 {
             panic!("Stack overflow!");
         }
+        // 上一层的地址出栈，并将ip指向它
         self.stack_pointer -= 1;
         let call_addr = self.stack[self.stack_pointer];
         self.position_in_memory = call_addr as usize;
@@ -104,7 +110,7 @@ mod tests {
     #[test]
     fn laod_func_test() {
         let mut cpu = CPU::new();
-        let add_twice: [u8; 6] = [0x80, 0x14, 0x80, 0x14, 0x00, 0xEE]; // 函数定义
+        let add_twice: [u8; 6] = [0x80, 0x14, 0x80, 0x14, 0x00, 0xEE]; // 函数定义：x = x + y; x = x + y; return;
 
         let mem = &mut cpu.memory;
         mem[0x100..0x106].copy_from_slice(&add_twice); // 函数加载到内存中
@@ -115,7 +121,7 @@ mod tests {
     fn call_func_test() {
         let mut cpu = CPU::new();
         let mem = &mut cpu.memory;
-        // 函数定义
+        // 函数定义：x = x + y; x = x + y; return;
         let add_twice: [u8; 6] = [0x80, 0x14, 0x80, 0x14, 0x00, 0xEE];
         // 函数加载到内存中
         mem[0x100..0x106].copy_from_slice(&add_twice);
@@ -124,7 +130,7 @@ mod tests {
         cpu.registers[0] = 5;
         cpu.registers[1] = 10;
 
-        // 设置操作码0x2100：在0x100处调用函数
+        // 设置操作码0x2100：调用在0x100处的函数
         mem[0x000] = 0x21;
         mem[0x001] = 0x00;
         // 设置操作码0x2100：在0x100处调用函数
@@ -136,6 +142,6 @@ mod tests {
 
         cpu.run();
         assert_eq!(cpu.registers[0], 45);
-        println!("5 + (10 * 2) + (10 * 2) = {}", cpu.registers[0]);
+        println!("5 + 10 + 10 + 10 + 10 = {}", cpu.registers[0]);
     }
 }
