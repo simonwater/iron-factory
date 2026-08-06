@@ -1,4 +1,5 @@
 pub mod bst_iterator;
+pub mod convert_bst;
 pub mod delete_node_in_bst;
 pub mod increasing_bst;
 pub mod inorder_successor;
