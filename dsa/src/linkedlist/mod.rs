@@ -5,6 +5,7 @@ pub mod insertion_sort_list;
 pub mod linked_list_cycle;
 pub mod list_node;
 pub mod lru_cache;
+pub mod merge_in_between;
 pub mod merge_k_lists;
 pub mod merge_two_sorted_lists;
 pub mod middle_of_the_linked_list;
