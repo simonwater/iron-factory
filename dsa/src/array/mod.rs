@@ -13,6 +13,7 @@ pub mod pivot_index;
 pub mod product_except_self;
 pub mod product_less_than_k;
 pub mod rotate_array;
+pub mod rotate_image;
 pub mod sort;
 pub mod sorted_squares;
 pub mod spiral_matrix;
