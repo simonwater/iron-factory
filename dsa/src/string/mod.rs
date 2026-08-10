@@ -4,6 +4,7 @@ pub mod find_anagrams;
 pub mod find_index;
 pub mod full_justify;
 pub mod group_anagrams;
+pub mod is_subsequence;
 pub mod largest_number;
 pub mod length_of_longest_substring;
 pub mod longest_common_prefix;
