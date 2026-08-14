@@ -2,6 +2,7 @@ pub mod character_replacement;
 pub mod check_inclusion;
 pub mod find_anagrams;
 pub mod find_index;
+pub mod find_substring;
 pub mod full_justify;
 pub mod group_anagrams;
 pub mod is_subsequence;
