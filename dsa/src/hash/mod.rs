@@ -1,6 +1,7 @@
 pub mod find_duplicate;
 pub mod first_missing_positive;
 pub mod happy_number;
+pub mod is_alien_sorted;
 pub mod is_anagram;
 pub mod isomorphic_strings;
 pub mod missing_number;
