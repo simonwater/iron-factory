@@ -1,4 +1,5 @@
 pub mod find_duplicate;
+pub mod find_min_difference;
 pub mod first_missing_positive;
 pub mod happy_number;
 pub mod is_alien_sorted;
