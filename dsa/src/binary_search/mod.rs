@@ -1,5 +1,6 @@
 pub mod find_peak_element;
 pub mod first_bad_version;
+pub mod job_scheduling;
 pub mod k_closest_elements;
 pub mod koko_eating_bananas;
 pub mod longest_increasing_subsequence;
