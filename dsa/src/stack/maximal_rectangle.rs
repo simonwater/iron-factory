@@ -5,8 +5,12 @@ pub struct Solution;
 
 impl Solution {
     pub fn maximal_rectangle(matrix: Vec<Vec<char>>) -> i32 {
+        if matrix.is_empty() || matrix[0].is_empty() {
+            return 0;
+        }
         let n = matrix[0].len();
         let mut heights = vec![0; n + 1];
+        let mut stack = Vec::with_capacity(n + 1);
         let mut ans = 0;
         for row in matrix.iter() {
             for (i, &ch) in row.iter().enumerate() {
@@ -16,17 +20,17 @@ impl Solution {
                     heights[i] = 0;
                 }
             }
-            let cur_max_area = Self::max_area(&heights);
+            let cur_max_area = Self::max_area(&heights, &mut stack);
             ans = ans.max(cur_max_area);
         }
 
         ans
     }
 
-    fn max_area(heights: &[i32]) -> i32 {
+    fn max_area(heights: &[i32], stack: &mut Vec<usize>) -> i32 {
         let n = heights.len();
         let mut ans = 0;
-        let mut stack = Vec::with_capacity(n);
+        stack.clear();
         for i in 0..n {
             let cur_h = heights[i];
             while let Some(&top_idx) = stack.last() {
