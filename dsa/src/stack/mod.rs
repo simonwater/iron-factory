@@ -5,6 +5,7 @@ pub mod daily_temperatures;
 pub mod decode_string;
 pub mod eval_rpn;
 pub mod largest_rectangle_area;
+pub mod maximal_rectangle;
 pub mod maximum_frequency_stack;
 pub mod min_stack;
 pub mod my_queue;
