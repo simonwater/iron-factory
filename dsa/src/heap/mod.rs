@@ -1,3 +1,4 @@
+pub mod ipo;
 pub mod k_closest;
 pub mod k_closest_elements;
 pub mod kth_largest;
