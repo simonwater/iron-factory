@@ -10,5 +10,7 @@
 //! 进行操作时不是线程安全，如 ``count += 1;``;而有的数据类型本身就不是线程安全的，如 `Rc`
 pub mod message_passing;
 pub mod multi_threads;
+pub mod park_unpark;
+pub mod park_unpark_by_channel;
 pub mod pool;
 pub mod shared_state;
